@@ -47,6 +47,11 @@ SmartHub is a full-featured Java-based web application designed to streamline an
 - MySQL 5.7/8+
 - Eclipse IDE / IntelliJ IDEA
 
+![Java](https://img.shields.io/badge/Language-Java-orange)
+![JSP](https://img.shields.io/badge/Framework-JSP-blue)
+![MySQL](https://img.shields.io/badge/Database-MySQL-yellow)
+
+
 ### 🗃️ Database Setup
 
 1. Create a MySQL database (e.g., `smarthub`)
