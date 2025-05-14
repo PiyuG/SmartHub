@@ -1,0 +1,209 @@
+<style>
+.topbar {
+    background: linear-gradient(135deg, #6a8bc0, #3e5a99);
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    position: fixed;
+    width: calc(100% - 350px);
+    top: 5px;
+    left: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    z-index: 9999;
+}
+.topbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 10%, transparent 50%),
+                linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 30%, transparent 80%);
+    clip-path: polygon(0 0, 100% 15%, 90% 100%, 0% 85%);
+    opacity: 0.6;
+}
+
+.topbar::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+    clip-path: polygon(10% 10%, 90% 0, 100% 100%, 0% 100%);
+    opacity: 0.4;
+}
+.topbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.notification {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.notification .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.notification-dropdown {
+    position: absolute;
+    right: 80px;
+    top: 50px;
+    background: white;
+    color: black;
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.notification-dropdown.show {
+    max-height: 300px;
+}
+
+.notification-dropdown ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.notification-dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.notification-dropdown li:hover {
+    background: #f5f5f5;
+}
+
+
+.topbar .icons i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.list-group-item {
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Default hover effect */
+.list-group-item:hover {
+    color: #007bff !important;
+}
+
+/* Keep selected item highlighted */
+.list-group-item.active {
+    background: #007bff !important;
+    color: white !important;
+}
+
+/* Hide dropdown menus by default */
+.dropdown-list {
+    display: none;
+    margin-left: 15px;
+}
+
+/* Add padding for sub-items */
+.sub-item {
+    padding-left: 30px;
+}
+.profile-dropdown {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    background: white;
+    color: black;
+    width: 200px; /* Adjust width */
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+.profile{
+    cursor: pointer;
+}
+
+.profile-dropdown.show {
+    max-height: 300px;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    padding: 1px;
+    margin: 5px;
+}
+
+.profile-dropdown li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items */
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.profile-dropdown p {
+    margin: 0;
+    flex: 1; /* Allows text to take up available space */
+}
+
+.profile-dropdown span {
+    font-size: 18px;
+    transition: transform 0.5s;
+}
+
+.profile-dropdown li:hover span {
+    transform: translateX(5px);
+}
+
+.profile-dropdown li:hover p {
+    font-weight: 600;
+}
+</style>
+<script src="<%= request.getContextPath() %>/js/dashboard.js"></script>
+
+<div class="topbar">
+    <h4>Dashboard</h4>
+    <div class="icons">
+        <div class="notification" onclick="toggleNotification()">
+           <i class="fas fa-bell"></i>
+           <span class="badge" id="notificationCount"></span>
+       </div>
+       <div class="profile" onclick="toggleDropdown()">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div>
+</div>
+<div class="content" id="content" style="margin-top: 60px;">
+</div>
+<div class="profile-dropdown" id="profileDropdown">
+    <ul>
+        <li onclick="window.location.href='logout.jsp'"><i class="fas fa-sign-out-alt"></i><p>Logout</p><span>></span></li>
+    </ul>
+</div>
+<div class="notification-dropdown" id="notificationDropdown">
+    <ul>
+        <li onclick="showLoaderAndNavigate('<%= request.getContextPath() %>/jsp_pages/customer/notification.jsp')"><i class="fas fa-comment"></i> New message from customer</li>
+    </ul>
+</div>

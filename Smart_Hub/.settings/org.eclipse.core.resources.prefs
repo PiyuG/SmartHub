@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//WebContent/jsp_pages/admin/index.jsp=UTF-8
+encoding//WebContent/jsp_pages/admin/manageProduct.jsp=UTF-8
+encoding//WebContent/jsp_pages/admin/paySlip.jsp=UTF-8
+encoding//WebContent/jsp_pages/admin/viewProduct.jsp=UTF-8
+encoding//WebContent/jsp_pages/customer/index.jsp=UTF-8
+encoding//WebContent/jsp_pages/employee/delivery_order.jsp=UTF-8
+encoding//WebContent/jsp_pages/employee/lowStock.jsp=UTF-8
+encoding//WebContent/jsp_pages/employee/viewattendance.jsp=UTF-8
+encoding//WebContent/jsp_pages/index/header.jsp=UTF-8
+encoding//WebContent/jsp_pages/index/index.jsp=UTF-8
+encoding//WebContent/jsp_pages/index/product_detail.jsp=UTF-8
+encoding/<project>=UTF-8

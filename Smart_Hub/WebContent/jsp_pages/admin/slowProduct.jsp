@@ -1,0 +1,1 @@
+<h1>Low product stock</h1>
