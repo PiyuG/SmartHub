@@ -114,18 +114,20 @@ SmartHub is a full-featured Java-based web application designed to streamline an
 
 ## 📸 Screenshots
 ### 🔹 Landing Page
-![image](https://github.com/user-attachments/assets/69390efa-42c5-4175-b65c-3d6e0dbe88a1)
+![image](https://github.com/user-attachments/assets/9c08055e-16f5-4e1b-a52d-8360a74567c0)
+
 
 ### 🔹 Admin Dashboard
-![image](https://github.com/user-attachments/assets/9d266d64-a85a-4e0a-b892-530ba5b05637)
+![image](https://github.com/user-attachments/assets/1a98c334-9f36-446c-9536-1ba9b12a7d73)
+
 
 ### 🔹 Employee Dashboard
-![image](https://github.com/user-attachments/assets/c128b163-b411-43af-aa6b-4e7ac816fc14)
+![image](https://github.com/user-attachments/assets/36eaa2f7-0b41-4ba4-acfe-5da97eb1f932)
+
 
 ### 🔹 Customer Dashboard
-![image](https://github.com/user-attachments/assets/8b224907-d2da-412a-a1a7-760a95c5d09a)
+![image](https://github.com/user-attachments/assets/d50804e9-dc77-4afa-bf61-b6194a0ade8b)
 
 
 
-# SmartHub
-A Java-based SmartHub system for managing customers, employees, orders, salaries, attendance, product offers, and delivery operations in a unified platform. Using Java, JSP/Servlet
+
